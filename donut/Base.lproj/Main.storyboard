@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="MountainsofChristmas-Reg.ttf">
@@ -24,25 +25,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPz-Iw-1kr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPz-Iw-1kr">
                                 <rect key="frame" x="191" y="488" width="221" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="221" id="RSQ-nq-FNd"/>
+                                    <constraint firstAttribute="height" constant="30" id="oRN-Pt-aXw"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MountainsofChristmas-Regular" family="Mountains of Christmas" pointSize="31"/>
                                 <state key="normal" title="see more donuts"/>
                                 <connections>
                                     <action selector="getFlickrImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5o-FV-egd"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ozU-fq-FHY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ozU-fq-FHY">
                                 <rect key="frame" x="67" y="112" width="468" height="291"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9a-7T-7qp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9a-7T-7qp">
                                 <rect key="frame" x="67" y="421" width="468" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bCE-XG-KdV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MountainsofChristmas-Regular" family="Mountains of Christmas" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="mmm...donuts!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOD-vd-2hZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mmm...donuts!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOD-vd-2hZ">
                                 <rect key="frame" x="67" y="20" width="468" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="f1z-xx-Q3f"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MountainsofChristmas-Regular" family="Mountains of Christmas" pointSize="40"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -50,17 +61,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="J9a-7T-7qp" firstAttribute="top" secondItem="ozU-fq-FHY" secondAttribute="bottom" constant="18" id="9cJ-Am-Mzq"/>
+                            <constraint firstItem="ozU-fq-FHY" firstAttribute="top" secondItem="iOD-vd-2hZ" secondAttribute="bottom" constant="43" id="3kw-ED-anG"/>
+                            <constraint firstItem="mPz-Iw-1kr" firstAttribute="top" secondItem="J9a-7T-7qp" secondAttribute="bottom" constant="46" id="5xe-ZC-wES"/>
+                            <constraint firstItem="iOD-vd-2hZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="64X-bv-pcy"/>
+                            <constraint firstItem="iOD-vd-2hZ" firstAttribute="trailing" secondItem="ozU-fq-FHY" secondAttribute="trailing" id="CLl-xt-BJw"/>
                             <constraint firstItem="ozU-fq-FHY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GA7-wJ-tCx"/>
+                            <constraint firstItem="ozU-fq-FHY" firstAttribute="leading" secondItem="iOD-vd-2hZ" secondAttribute="leading" id="HTO-4R-12C"/>
+                            <constraint firstItem="iOD-vd-2hZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="47" id="IiZ-hI-XhP"/>
                             <constraint firstItem="mPz-Iw-1kr" firstAttribute="top" secondItem="ozU-fq-FHY" secondAttribute="bottom" constant="45" id="Oc4-pj-PQe"/>
-                            <constraint firstItem="mPz-Iw-1kr" firstAttribute="top" secondItem="iOD-vd-2hZ" secondAttribute="bottom" constant="419" id="WRo-qv-P1c"/>
-                            <constraint firstItem="mPz-Iw-1kr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YZp-Mx-v5v"/>
-                            <constraint firstItem="mPz-Iw-1kr" firstAttribute="top" secondItem="ozU-fq-FHY" secondAttribute="bottom" constant="85" id="ZkZ-10-W5H"/>
-                            <constraint firstItem="J9a-7T-7qp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dEJ-Sj-IlY"/>
-                            <constraint firstItem="J9a-7T-7qp" firstAttribute="top" secondItem="iOD-vd-2hZ" secondAttribute="bottom" constant="352" id="dV7-Uj-upx"/>
-                            <constraint firstItem="iOD-vd-2hZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j8F-w0-cYz"/>
-                            <constraint firstItem="ozU-fq-FHY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mvi-Rv-VTS"/>
-                            <constraint firstItem="iOD-vd-2hZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rh5-wY-8zc"/>
+                            <constraint firstItem="J9a-7T-7qp" firstAttribute="leading" secondItem="ozU-fq-FHY" secondAttribute="leading" id="SCc-QJ-ct8"/>
+                            <constraint firstItem="J9a-7T-7qp" firstAttribute="top" secondItem="ozU-fq-FHY" secondAttribute="bottom" constant="18" id="X4q-Kj-5mh"/>
+                            <constraint firstItem="mPz-Iw-1kr" firstAttribute="centerX" secondItem="J9a-7T-7qp" secondAttribute="centerX" id="YV4-0w-jyJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mPz-Iw-1kr" secondAttribute="bottom" constant="82" id="hyt-ph-45n"/>
+                            <constraint firstItem="J9a-7T-7qp" firstAttribute="trailing" secondItem="ozU-fq-FHY" secondAttribute="trailing" id="uW0-yy-fGU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iOD-vd-2hZ" secondAttribute="trailing" constant="45" id="wpO-AE-w24"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

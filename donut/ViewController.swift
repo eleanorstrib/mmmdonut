@@ -36,7 +36,12 @@ class ViewController: UIViewController {
     }
     
     private func flickrAPICall(){
-    
+        let url = "blah"
+        
+        print (url)
+//        NSURL(string: "Flickrconstants.Base.FlickrBaseUrl/?")
+
+
     }
     
     override func viewDidLoad() {
