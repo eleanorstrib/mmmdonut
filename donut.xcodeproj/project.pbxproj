@@ -20,6 +20,9 @@
 		FD16068D1C735B5C00642E77 /* key.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD16068C1C735B5C00642E77 /* key.swift */; };
 		FD16068E1C735B5C00642E77 /* key.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD16068C1C735B5C00642E77 /* key.swift */; };
 		FD16068F1C735B5C00642E77 /* key.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD16068C1C735B5C00642E77 /* key.swift */; };
+		FD1606911C73662000642E77 /* flickrconstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1606901C73662000642E77 /* flickrconstants.swift */; };
+		FD1606921C73662000642E77 /* flickrconstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1606901C73662000642E77 /* flickrconstants.swift */; };
+		FD1606931C73662000642E77 /* flickrconstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1606901C73662000642E77 /* flickrconstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,7 @@
 		FD16067C1C73589C00642E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD1606881C735B0800642E77 /* MountainsofChristmas-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MountainsofChristmas-Reg.ttf"; sourceTree = "<group>"; };
 		FD16068C1C735B5C00642E77 /* key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = key.swift; sourceTree = "<group>"; };
+		FD1606901C73662000642E77 /* flickrconstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flickrconstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 				FD1606661C73589B00642E77 /* Info.plist */,
 				FD1606881C735B0800642E77 /* MountainsofChristmas-Reg.ttf */,
 				FD16068C1C735B5C00642E77 /* key.swift */,
+				FD1606901C73662000642E77 /* flickrconstants.swift */,
 			);
 			path = donut;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD1606911C73662000642E77 /* flickrconstants.swift in Sources */,
 				FD16065D1C73589B00642E77 /* ViewController.swift in Sources */,
 				FD16068D1C735B5C00642E77 /* key.swift in Sources */,
 				FD16065B1C73589B00642E77 /* AppDelegate.swift in Sources */,
@@ -280,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD1606701C73589B00642E77 /* donutTests.swift in Sources */,
+				FD1606921C73662000642E77 /* flickrconstants.swift in Sources */,
 				FD16068E1C735B5C00642E77 /* key.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD16067B1C73589C00642E77 /* donutUITests.swift in Sources */,
+				FD1606931C73662000642E77 /* flickrconstants.swift in Sources */,
 				FD16068F1C735B5C00642E77 /* key.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

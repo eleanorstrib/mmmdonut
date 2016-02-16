@@ -7,6 +7,8 @@
     <customFonts key="customFonts">
         <mutableArray key="MountainsofChristmas-Reg.ttf">
             <string>MountainsofChristmas-Regular</string>
+            <string>MountainsofChristmas-Regular</string>
+            <string>MountainsofChristmas-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -22,32 +24,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPz-Iw-1kr">
-                                <rect key="frame" x="190" y="470" width="221" height="30"/>
-                                <fontDescription key="fontDescription" name="MountainsofChristmas-Regular" family="Mountains of Christmas" pointSize="15"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPz-Iw-1kr">
+                                <rect key="frame" x="191" y="488" width="221" height="30"/>
+                                <fontDescription key="fontDescription" name="MountainsofChristmas-Regular" family="Mountains of Christmas" pointSize="31"/>
                                 <state key="normal" title="see more donuts"/>
+                                <connections>
+                                    <action selector="getFlickrImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5o-FV-egd"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ozU-fq-FHY">
-                                <rect key="frame" x="67" y="134" width="468" height="291"/>
+                                <rect key="frame" x="67" y="112" width="468" height="291"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="mmm...donuts!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOD-vd-2hZ">
-                                <rect key="frame" x="207" y="57" width="186" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9a-7T-7qp">
+                                <rect key="frame" x="67" y="421" width="468" height="21"/>
+                                <fontDescription key="fontDescription" name="MountainsofChristmas-Regular" family="Mountains of Christmas" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="mmm...donuts!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOD-vd-2hZ">
+                                <rect key="frame" x="67" y="20" width="468" height="49"/>
+                                <fontDescription key="fontDescription" name="MountainsofChristmas-Regular" family="Mountains of Christmas" pointSize="40"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="J9a-7T-7qp" firstAttribute="top" secondItem="ozU-fq-FHY" secondAttribute="bottom" constant="18" id="9cJ-Am-Mzq"/>
                             <constraint firstItem="ozU-fq-FHY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GA7-wJ-tCx"/>
                             <constraint firstItem="mPz-Iw-1kr" firstAttribute="top" secondItem="ozU-fq-FHY" secondAttribute="bottom" constant="45" id="Oc4-pj-PQe"/>
+                            <constraint firstItem="mPz-Iw-1kr" firstAttribute="top" secondItem="iOD-vd-2hZ" secondAttribute="bottom" constant="419" id="WRo-qv-P1c"/>
                             <constraint firstItem="mPz-Iw-1kr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YZp-Mx-v5v"/>
+                            <constraint firstItem="mPz-Iw-1kr" firstAttribute="top" secondItem="ozU-fq-FHY" secondAttribute="bottom" constant="85" id="ZkZ-10-W5H"/>
+                            <constraint firstItem="J9a-7T-7qp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dEJ-Sj-IlY"/>
+                            <constraint firstItem="J9a-7T-7qp" firstAttribute="top" secondItem="iOD-vd-2hZ" secondAttribute="bottom" constant="352" id="dV7-Uj-upx"/>
                             <constraint firstItem="iOD-vd-2hZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j8F-w0-cYz"/>
                             <constraint firstItem="ozU-fq-FHY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mvi-Rv-VTS"/>
+                            <constraint firstItem="iOD-vd-2hZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rh5-wY-8zc"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GA7-wJ-tCx"/>
+                                <exclude reference="Oc4-pj-PQe"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="flickrImage" destination="ozU-fq-FHY" id="Xmy-fi-VnW"/>
+                        <outlet property="imageLabel" destination="J9a-7T-7qp" id="jaz-GJ-OVP"/>
                         <outlet property="moreDonuts" destination="mPz-Iw-1kr" id="YkS-BX-scl"/>
                         <outlet property="titleLabel" destination="iOD-vd-2hZ" id="oON-Xa-nOS"/>
                     </connections>
