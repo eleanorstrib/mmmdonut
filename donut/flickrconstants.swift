@@ -22,5 +22,14 @@ struct Flickrconstants {
         static let NoJSONCallback = "nojsoncallback"
     }
     
+    struct ParameterValues {
+        static let APIKey = FLICKR_API_KEY
+        static let ResponseFormat = "json"
+        static let DisableJSONCallback =  "1"
+        static let GalleryPhotosMethod = "flickr.galleries.getPhotos"
+        static let GalleryID = "72157663354529069"
+        static let MediaUrl = "url_m"
+    
+    }
 
 }
