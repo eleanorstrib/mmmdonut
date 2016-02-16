@@ -4,6 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="MountainsofChristmas-Reg.ttf">
+            <string>MountainsofChristmas-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -28,7 +33,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPz-Iw-1kr">
                                 <rect key="frame" x="190" y="470" width="221" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="MountainsofChristmas-Regular" family="Mountains of Christmas" pointSize="15"/>
                                 <state key="normal" title="see more donuts"/>
                             </button>
                         </subviews>
