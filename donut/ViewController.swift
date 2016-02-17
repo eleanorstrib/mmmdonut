@@ -55,7 +55,20 @@ class ViewController: UIViewController {
         
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {(data, response, error) in
             if error == nil {
-                print(data)
+
+                if let data = data {
+                    let dataJSON : AnyObject!
+                    do {
+                    dataJSON = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+                        print(dataJSON)
+                    } catch {
+                        print(url)
+                        print("there was an error")
+                        return
+                    }
+                }
+                
+                
             } else {
                 print("there was an error")
             }
@@ -72,7 +85,7 @@ class ViewController: UIViewController {
             for (key, value) in parameters {
                 let stringValue = "\(value)"
                 let escValue = stringValue.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-                keyValuePairs.append(key + "=" + "(/escValue!)")
+                keyValuePairs.append(key + "=" + "\(escValue!)")
             }
         return "?\(keyValuePairs.joinWithSeparator("&"))"
         }
