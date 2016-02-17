@@ -60,11 +60,15 @@ class ViewController: UIViewController {
                     let dataJSON : AnyObject!
                     do {
                     dataJSON = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
-                        print(dataJSON)
                     } catch {
                         print(url)
                         print("there was an error")
                         return
+                    }
+                    if let flickrPhotosAll = dataJSON["photos"] as? [String: AnyObject] {
+                        print (flickrPhotosAll)
+                        let flickrPhotoArray = flickrPhotosAll["photo"] as? [[String:AnyObject]]
+                        print(flickrPhotoArray![0])
                     }
                 }
                 
