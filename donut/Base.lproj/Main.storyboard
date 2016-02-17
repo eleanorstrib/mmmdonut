@@ -31,7 +31,7 @@
                                     <constraint firstAttribute="width" constant="221" id="RSQ-nq-FNd"/>
                                     <constraint firstAttribute="height" constant="30" id="oRN-Pt-aXw"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MountainsofChristmas-Regular" family="Mountains of Christmas" pointSize="31"/>
+                                <fontDescription key="fontDescription" name="MountainsofChristmas-Regular" family="Mountains of Christmas" pointSize="27"/>
                                 <state key="normal" title="see more donuts"/>
                                 <connections>
                                     <action selector="getFlickrImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5o-FV-egd"/>
@@ -45,7 +45,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="bCE-XG-KdV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MountainsofChristmas-Regular" family="Mountains of Christmas" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="MountainsofChristmas-Regular" family="Mountains of Christmas" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -54,7 +54,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="f1z-xx-Q3f"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MountainsofChristmas-Regular" family="Mountains of Christmas" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="MountainsofChristmas-Regular" family="Mountains of Christmas" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

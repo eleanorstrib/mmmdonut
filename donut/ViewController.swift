@@ -36,12 +36,46 @@ class ViewController: UIViewController {
     }
     
     private func flickrAPICall(){
-        let url = "blah"
         
-        print (url)
-//        NSURL(string: "Flickrconstants.Base.FlickrBaseUrl/?")
-
-
+        //this array organizes all of the pararmeters from the flickrconstants file in order
+        //the idea is to make the code easier to maintain by storing all parameters in one place across the whole app
+        let flickrParameters = [
+            Flickrconstants.ParameterKeys.Method : Flickrconstants.ParameterValues.GalleryPhotosMethod,
+            Flickrconstants.ParameterKeys.APIKey : Flickrconstants.ParameterValues.APIKey,
+            Flickrconstants.ParameterKeys.GalleryID : Flickrconstants.ParameterValues.GalleryID,
+            Flickrconstants.ParameterKeys.Extras : Flickrconstants.ParameterValues.MediaUrl,
+            Flickrconstants.ParameterKeys.Format : Flickrconstants.ParameterValues.ResponseFormat,
+            Flickrconstants.ParameterKeys.NoJSONCallback : Flickrconstants.ParameterValues.DisableJSONCallback
+        ]
+        
+        //this puts together the URL from the constants, creates the request and runs the session
+        let urlString = Flickrconstants.Base.FlickrBaseUrl + escParameters(flickrParameters)
+        let url = NSURL(string: urlString)!
+        let request = NSURLRequest(URL: url)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {(data, response, error) in
+            if error == nil {
+                print(data)
+            } else {
+                print("there was an error")
+            }
+        
+        }
+        task.resume()
+    }
+    
+    private func escParameters(parameters: [String:AnyObject]) -> String {
+        if parameters.isEmpty {
+            return "error"
+        } else {
+            var keyValuePairs = [String()]
+            for (key, value) in parameters {
+                let stringValue = "\(value)"
+                let escValue = stringValue.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+                keyValuePairs.append(key + "=" + "(/escValue!)")
+            }
+        return "?\(keyValuePairs.joinWithSeparator("&"))"
+        }
     }
     
     override func viewDidLoad() {
