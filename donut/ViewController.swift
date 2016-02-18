@@ -76,7 +76,9 @@ class ViewController: UIViewController {
                             if let imageData = NSData(contentsOfURL: imageUrl!) {
  
                                self.flickrImage.image = UIImage(data: imageData)
+                               self.flickrImage.contentMode = .ScaleAspectFill
                                self.imageLabel.text = photoTitle
+                               self.enableUI(true)
                                 
                                 }
                                 
@@ -88,6 +90,7 @@ class ViewController: UIViewController {
                 
             } else {
                 print("there was an error")
+                self.enableUI(true)
             }
         
         }
