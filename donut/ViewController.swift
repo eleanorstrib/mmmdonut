@@ -66,9 +66,22 @@ class ViewController: UIViewController {
                         return
                     }
                     if let flickrPhotosAll = dataJSON["photos"] as? [String: AnyObject] {
-                        print (flickrPhotosAll)
                         let flickrPhotoArray = flickrPhotosAll["photo"] as? [[String:AnyObject]]
-                        print(flickrPhotoArray![0])
+                        let randomChoice = Int(arc4random_uniform(UInt32(flickrPhotoArray!.count)))
+                        
+                    if let photoURL = flickrPhotoArray![randomChoice]["url_m"] as? String,
+                        let photoTitle = flickrPhotoArray![randomChoice]["title"] as? String
+                        {
+                            let imageUrl = NSURL(string: photoURL)
+                            if let imageData = NSData(contentsOfURL: imageUrl!) {
+ 
+                               self.flickrImage.image = UIImage(data: imageData)
+                               self.imageLabel.text = photoTitle
+                                
+                                }
+                                
+                        }
+
                     }
                 }
                 
