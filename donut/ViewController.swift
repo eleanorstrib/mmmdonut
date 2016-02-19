@@ -16,9 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var moreDonuts: UIButton!
     @IBOutlet weak var imageLabel: UILabel!
     
+    var buttonClicks = 0
+    
     @IBAction func getFlickrImage(sender: AnyObject) {
-        enableUI(false)
-        flickrAPICall()
+            enableUI(false)
+            flickrAPICall()
     }
     
     private func enableUI(enabled:Bool) {
@@ -28,12 +30,16 @@ class ViewController: UIViewController {
         if enabled {
             imageLabel.alpha = 1.0
             moreDonuts.alpha = 1.0
+            flickrImage.alpha = 1.0
         } else {
-            imageLabel.alpha = 0.5
+            imageLabel.text = "fetching your donuts.."
+            imageLabel.alpha = 1.0
             moreDonuts.alpha = 0.5
+            flickrImage.alpha = 0.5
         }
     
     }
+    
     
     private func flickrAPICall(){
         
